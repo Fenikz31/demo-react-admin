@@ -9,6 +9,8 @@ import {
 } from './components/posts'
 import { UserList } from './components/users'
 
+import authProvider from './provider/authProvider'
+
 import jsonServerProvider from 'ra-data-json-server'
 import PostIcon from '@material-ui/icons/Book'
 import UserIcon from '@material-ui/icons/Group'
@@ -18,7 +20,7 @@ import './App.css'
 
 const dataProvider = jsonServerProvider('https://jsonplaceholder.ir/');
 const App = () => (
-  <Admin dashboard={Dashboard} dataProvider={dataProvider} >
+  <Admin authProvider={authProvider} dashboard={Dashboard} dataProvider={dataProvider} >
     <Resource name="posts" list={PostList} edit={PostEdit} create={PostCreate} icon={PostIcon}/>
     <Resource name="users" list={UserList} icon={UserIcon} />
   </Admin>
