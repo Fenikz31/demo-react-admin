@@ -1,5 +1,5 @@
 import React from 'react'
-import { Admin, Resource, EditGuesser } from 'react-admin'
+import { Admin, Resource } from 'react-admin'
 import { UserList } from './components/users'
 import {
   PostCreate,
