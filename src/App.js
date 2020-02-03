@@ -18,7 +18,7 @@ import UserIcon from '@material-ui/icons/Group'
 import logo from './logo.svg'
 import './App.css'
 
-const dataProvider = jsonServerProvider('https://jsonplaceholder.ir/');
+const dataProvider = jsonServerProvider('http://jsonplaceholder.typicode.com');
 const App = () => (
   <Admin authProvider={authProvider} dashboard={Dashboard} dataProvider={dataProvider} >
     <Resource name="posts" list={PostList} edit={PostEdit} create={PostCreate} icon={PostIcon}/>
